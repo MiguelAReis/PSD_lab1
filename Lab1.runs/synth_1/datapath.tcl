@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "/home/miguel/Desktop/PSD/Lab1/Lab1.runs/synth_1/controlUnit.tcl"
+  variable script "/home/miguel/Desktop/PSD/PSD_lab1/Lab1.runs/synth_1/datapath.tcl"
   variable category "vivado_synth"
 }
 
@@ -76,15 +76,15 @@ create_project -in_memory -part xc7a35tcpg236-1
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir /home/miguel/Desktop/PSD/Lab1/Lab1.cache/wt [current_project]
-set_property parent.project_path /home/miguel/Desktop/PSD/Lab1/Lab1.xpr [current_project]
+set_property webtalk.parent_dir /home/miguel/Desktop/PSD/PSD_lab1/Lab1.cache/wt [current_project]
+set_property parent.project_path /home/miguel/Desktop/PSD/PSD_lab1/Lab1.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_output_repo /home/miguel/Desktop/PSD/Lab1/Lab1.cache/ip [current_project]
+set_property ip_output_repo /home/miguel/Desktop/PSD/PSD_lab1/Lab1.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_vhdl -library xil_defaultlib /home/miguel/Desktop/PSD/Lab1/Lab1.srcs/sources_1/new/controlUnit.vhd
+read_vhdl -library xil_defaultlib /home/miguel/Desktop/PSD/PSD_lab1/Lab1.srcs/sources_1/new/datapath.vhd
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -98,17 +98,17 @@ set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }
-synth_design -top controlUnit -part xc7a35tcpg236-1
+synth_design -top datapath -part xc7a35tcpg236-1
 OPTRACE "synth_design" END { }
 
 
 OPTRACE "write_checkpoint" START { CHECKPOINT }
 # disable binary constraint mode for synth run checkpoints
 set_param constraints.enableBinaryConstraints false
-write_checkpoint -force -noxdef controlUnit.dcp
+write_checkpoint -force -noxdef datapath.dcp
 OPTRACE "write_checkpoint" END { }
 OPTRACE "synth reports" START { REPORT }
-create_report "synth_1_synth_report_utilization_0" "report_utilization -file controlUnit_utilization_synth.rpt -pb controlUnit_utilization_synth.pb"
+create_report "synth_1_synth_report_utilization_0" "report_utilization -file datapath_utilization_synth.rpt -pb datapath_utilization_synth.pb"
 OPTRACE "synth reports" END { }
 file delete __synthesis_is_running__
 close [open __synthesis_is_complete__ w]

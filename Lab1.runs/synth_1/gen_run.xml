@@ -1,17 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1602170333">
-  <File Type="VDS-TIMING-PB" Name="controlUnit_timing_summary_synth.pb"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="controlUnit_timing_summary_synth.rpt"/>
-  <File Type="RDS-DCP" Name="controlUnit.dcp"/>
-  <File Type="RDS-UTIL-PB" Name="controlUnit_utilization_synth.pb"/>
-  <File Type="RDS-UTIL" Name="controlUnit_utilization_synth.rpt"/>
-  <File Type="RDS-PROPCONSTRS" Name="controlUnit_drc_synth.rpt"/>
-  <File Type="RDS-RDS" Name="controlUnit.vds"/>
-  <File Type="REPORTS-TCL" Name="controlUnit_reports.tcl"/>
-  <File Type="PA-TCL" Name="controlUnit.tcl"/>
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1602184913">
+  <File Type="VDS-TIMING-PB" Name="datapath_timing_summary_synth.pb"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="datapath_timing_summary_synth.rpt"/>
+  <File Type="RDS-DCP" Name="datapath.dcp"/>
+  <File Type="RDS-UTIL-PB" Name="datapath_utilization_synth.pb"/>
+  <File Type="RDS-UTIL" Name="datapath_utilization_synth.rpt"/>
+  <File Type="RDS-PROPCONSTRS" Name="datapath_drc_synth.rpt"/>
+  <File Type="RDS-RDS" Name="datapath.vds"/>
+  <File Type="REPORTS-TCL" Name="datapath_reports.tcl"/>
+  <File Type="PA-TCL" Name="datapath.tcl"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/controlUnit.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/datapath.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -19,8 +24,7 @@
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="controlUnit"/>
-      <Option Name="TopAutoSet" Val="TRUE"/>
+      <Option Name="TopModule" Val="datapath"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
@@ -36,9 +40,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
-      <Desc>Vivado Synthesis Defaults</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
     <Step Id="synth_design"/>
   </Strategy>
 </GenRun>

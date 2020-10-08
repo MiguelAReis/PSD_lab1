@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Thu Oct  8 15:46:53 2020
+# Process ID: 24786
+# Current directory: /home/miguel/Desktop/PSD/Lab1/Lab1.sim/sim_1/synth/func/xsim
+# Command line: wbtcv -mode batch -source /home/miguel/Desktop/PSD/Lab1/Lab1.sim/sim_1/synth/func/xsim/xsim.dir/controlUnit_tb_func_synth/webtalk/xsim_webtalk.tcl -notrace
+# Log file: /home/miguel/Desktop/PSD/Lab1/Lab1.sim/sim_1/synth/func/xsim/webtalk.log
+# Journal file: /home/miguel/Desktop/PSD/Lab1/Lab1.sim/sim_1/synth/func/xsim/webtalk.jou
+#-----------------------------------------------------------
+source /home/miguel/Desktop/PSD/Lab1/Lab1.sim/sim_1/synth/func/xsim/xsim.dir/controlUnit_tb_func_synth/webtalk/xsim_webtalk.tcl -notrace

@@ -92,13 +92,31 @@ begin
     rst <= '1' AFTER 20 ns,
            '0' AFTER 40 ns;
            
-    ent <= "10101010" AFTER 60ns;
+    ent <= "10101010" AFTER 60ns,
+           "00110011" AFTER 100ns,
+           "01010101" AFTER 140ns;
     
-    enableReg <= '1' AFTER 80 ns,
-                 '0' AFTER 100 ns;
-                 
-    oper <= "01" AFTER 120 ns;
-    enableOper <= '1' AFtER 120 ns;
+    enableReg <= '1' AFTER 60 ns,
+                 '0' AFTER 80 ns,
+                 '1' AFTER 100ns,
+                 '0' AFTER 120ns,
+                 '1' AFTER 140ns,
+                 '0' AFTER 160ns,
+                 '1' AFTER 180ns,
+                 '0' AFTER 190ns;   
+                             
+    oper <=      "00" AFTER 80 ns,
+                 "01" AFTER 100 ns,
+                 "10" AFTER 140 ns,
+                 "11" AFTER 180 ns;
+    
+    enableOper <= '1' AFtER 80 ns,
+                  '0' AFTER 100ns,
+                  '1' AFTER 120ns,
+                  '0' AFTER 140ns,
+                  '1' AFTER 160ns,
+                  '0' AFTER 180ns,
+                  '1' AFTER 200ns;
            
   WAIT;
   END PROCESS;

@@ -96,3 +96,25 @@ close_sim
 launch_simulation
 source datapath_tb.tcl
 close_sim
+close_project
+open_project /home/miguel/Desktop/PSD/PSD_lab1/Lab1.xpr
+launch_simulation
+source datapath_tb.tcl
+close_sim
+launch_simulation
+source datapath_tb.tcl
+close_sim
+launch_simulation
+source datapath_tb.tcl
+close_sim
+launch_simulation
+source datapath_tb.tcl
+close_sim
+launch_simulation
+source datapath_tb.tcl
+close_sim
+launch_simulation
+source datapath_tb.tcl
+close_sim
+launch_simulation
+source datapath_tb.tcl

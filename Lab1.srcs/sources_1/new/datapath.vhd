@@ -76,7 +76,7 @@ begin
                 WHEN "00" => reg2 <= operADD;
                 WHEN "01" => reg2 <= operMULT;
                 WHEN "10" => reg2 <= operLOGIC;
-                WHEN others => reg2 <= operSHIFt;  
+                WHEN others => reg2 <= operSHIFT;  
             END CASE;
             operDone <= '1';
           end if;

@@ -1,3 +1,7 @@
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/miguel/Desktop/PSD/Lab1/Lab1.sim/sim_1/synth/func/xsim/controlUnit_tb_func_synth.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/miguel/Desktop/PSD/PSD_lab1/Lab1.sim/sim_1/synth/func/xsim/finalCircuit_tb_func_synth.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clkdiv
 INFO: [VRFC 10-311] analyzing module controlUnit
+INFO: [VRFC 10-311] analyzing module datapath
+INFO: [VRFC 10-311] analyzing module disp7
+INFO: [VRFC 10-311] analyzing module finalCircuit
 INFO: [VRFC 10-311] analyzing module glbl

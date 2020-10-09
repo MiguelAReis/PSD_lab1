@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "/home/miguel/Desktop/PSD/PSD_lab1/Lab1.runs/synth_1/datapath.tcl"
+  variable script "/home/miguel/Desktop/PSD/PSD_lab1/Lab1.runs/synth_1/finalCircuit.tcl"
   variable category "vivado_synth"
 }
 
@@ -84,7 +84,14 @@ set_property ip_output_repo /home/miguel/Desktop/PSD/PSD_lab1/Lab1.cache/ip [cur
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_vhdl -library xil_defaultlib /home/miguel/Desktop/PSD/PSD_lab1/Lab1.srcs/sources_1/new/datapath.vhd
+read_vhdl -library xil_defaultlib {
+  /home/miguel/Desktop/PSD/PSD_lab1/Lab1.srcs/sources_1/new/controlUnit.vhd
+  /home/miguel/Desktop/PSD/PSD_lab1/Lab1.srcs/sources_1/new/datapath.vhd
+  /home/miguel/Desktop/PSD/PSD_lab1/Lab1.srcs/sources_1/imports/lab0Files/hex2disp.vhd
+  /home/miguel/Desktop/PSD/PSD_lab1/Lab1.srcs/sources_1/imports/lab0Files/disp7.vhd
+  /home/miguel/Desktop/PSD/PSD_lab1/Lab1.srcs/sources_1/imports/lab0Files/clkdiv.vhd
+  /home/miguel/Desktop/PSD/PSD_lab1/Lab1.srcs/sources_1/new/finalCircuit.vhd
+}
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -98,17 +105,17 @@ set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }
-synth_design -top datapath -part xc7a35tcpg236-1
+synth_design -top finalCircuit -part xc7a35tcpg236-1
 OPTRACE "synth_design" END { }
 
 
 OPTRACE "write_checkpoint" START { CHECKPOINT }
 # disable binary constraint mode for synth run checkpoints
 set_param constraints.enableBinaryConstraints false
-write_checkpoint -force -noxdef datapath.dcp
+write_checkpoint -force -noxdef finalCircuit.dcp
 OPTRACE "write_checkpoint" END { }
 OPTRACE "synth reports" START { REPORT }
-create_report "synth_1_synth_report_utilization_0" "report_utilization -file datapath_utilization_synth.rpt -pb datapath_utilization_synth.pb"
+create_report "synth_1_synth_report_utilization_0" "report_utilization -file finalCircuit_utilization_synth.rpt -pb finalCircuit_utilization_synth.pb"
 OPTRACE "synth reports" END { }
 file delete __synthesis_is_running__
 close [open __synthesis_is_complete__ w]

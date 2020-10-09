@@ -1,0 +1,13 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../Lab1.srcs/sources_1/new/controlUnit.vhd" \
+"../../../../Lab1.srcs/sources_1/new/datapath.vhd" \
+"../../../../Lab1.srcs/sources_1/imports/lab0Files/hex2disp.vhd" \
+"../../../../Lab1.srcs/sources_1/imports/lab0Files/disp7.vhd" \
+"../../../../Lab1.srcs/sources_1/imports/lab0Files/clkdiv.vhd" \
+"../../../../Lab1.srcs/sources_1/new/finalCircuit.vhd" \
+"../../../../Lab1.srcs/sim_1/new/controlUnit_tb.vhd" \
+"../../../../Lab1.srcs/sim_1/new/finalCircuit_tb.vhd" \
+
+# Do not sort compile order
+nosort

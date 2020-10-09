@@ -2,5 +2,6 @@
 2020.1
 May 27 2020
 19:59:15
-/home/miguel/Desktop/PSD/Lab1/Lab1.sim/sim_1/synth/func/xsim/controlUnit_tb_func_synth.v,1602168328,verilog,,,,controlUnit;glbl,,,,,,,,
-/home/miguel/Desktop/PSD/Lab1/Lab1.srcs/sim_1/new/controlUnit_tb.vhd,1602168302,vhdl,,,,controlunit_tb,,,,,,,,
+/home/miguel/Desktop/PSD/PSD_lab1/Lab1.sim/sim_1/synth/func/xsim/finalCircuit_tb_func_synth.v,1602245682,verilog,,,,clkdiv;controlUnit;datapath;disp7;finalCircuit;glbl,,,,,,,,
+/home/miguel/Desktop/PSD/PSD_lab1/Lab1.srcs/sim_1/new/controlUnit_tb.vhd,1602172014,vhdl,,,,controlunit_tb,,,,,,,,
+/home/miguel/Desktop/PSD/PSD_lab1/Lab1.srcs/sim_1/new/finalCircuit_tb.vhd,1602243035,vhdl,,,,finalcircuit_tb,,,,,,,,

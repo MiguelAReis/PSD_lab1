@@ -48,7 +48,7 @@ end datapath;
 architecture Behavioral of datapath is
 
     SIGNAL operADD :STD_LOGIC_VECTOR (7 downto 0);
-    SIGNAL operMULT :STD_LOGIC_VECTOR (7 downto 0);
+    SIGNAL operMULT :STD_LOGIC_VECTOR (15 downto 0);
     SIGNAL operLOGIC :STD_LOGIC_VECTOR (7 downto 0);
     SIGNAL operSHIFT :STD_LOGIC_VECTOR (7 downto 0);
     SIGNAL reg1 : STD_LOGIC_VECTOR (7 downto 0);
@@ -58,9 +58,9 @@ architecture Behavioral of datapath is
 begin
     
     operADD <= reg1 + reg2;
-    operMULT <= reg1(7 downto 4) * reg2(7 downto 4);
+    operMULT <= reg1 * reg2; -- perguntar ao stor
     operLOGIC <= reg1 NOR reg2;
-    operSHIFT <= reg2(0) & reg2(7 downto 1);
+    operSHIFT <=  reg2(6 downto 0) & reg2(7);
     
     process (clk)
       begin
@@ -74,7 +74,7 @@ begin
           ELSIF enableOper ='1' AND operDONE='0' then
             CASE(oper) IS
                 WHEN "00" => reg2 <= operADD;
-                WHEN "01" => reg2 <= operMULT;
+                WHEN "01" => reg2 <= operMULT(7 downto 0);
                 WHEN "10" => reg2 <= operLOGIC;
                 WHEN others => reg2 <= operSHIFT;  
             END CASE;

@@ -92,8 +92,8 @@ begin
     rst <= '1' AFTER 20 ns,
            '0' AFTER 40 ns;
            
-    ent <= "10101010" AFTER 60ns,
-           "00110011" AFTER 100ns,
+    ent <= "00001101" AFTER 60ns,
+           "00000010" AFTER 100ns,
            "01010101" AFTER 140ns;
     
     enableReg <= '1' AFTER 60 ns,

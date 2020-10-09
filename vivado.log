@@ -2,8 +2,8 @@
 # Vivado v2020.1 (64-bit)
 # SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
 # IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
-# Start of session at: Fri Oct  9 11:04:25 2020
-# Process ID: 6638
+# Start of session at: Fri Oct  9 15:40:05 2020
+# Process ID: 12651
 # Current directory: /home/miguel/Desktop/PSD/PSD_lab1
 # Command line: vivado
 # Log file: /home/miguel/Desktop/PSD/PSD_lab1/vivado.log
@@ -17,31 +17,146 @@ INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2020.1/data/ip'.
 WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
-open_project: Time (s): cpu = 00:00:15 ; elapsed = 00:00:06 . Memory (MB): peak = 6966.578 ; gain = 38.047 ; free physical = 209 ; free virtual = 5171
+open_project: Time (s): cpu = 00:00:29 ; elapsed = 00:00:18 . Memory (MB): peak = 7036.887 ; gain = 28.039 ; free physical = 1648 ; free virtual = 5401
 launch_simulation
 Command: launch_simulation 
 INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/miguel/Desktop/PSD/PSD_lab1/Lab1.sim/sim_1/behav/xsim'
 INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'controlUnit_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-54] Inspecting design source files for 'datapath_tb' in fileset 'sim_1'...
 INFO: [USF-XSim-97] Finding global include files...
 INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
 INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
 INFO: [USF-XSim-2] XSim::Compile design
 INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/miguel/Desktop/PSD/PSD_lab1/Lab1.sim/sim_1/behav/xsim'
-xvhdl --incr --relax -prj controlUnit_tb_vhdl.prj
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/miguel/Desktop/PSD/PSD_lab1/Lab1.srcs/sources_1/new/controlUnit.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'controlUnit'
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/miguel/Desktop/PSD/PSD_lab1/Lab1.srcs/sources_1/new/datapath.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'datapath'
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/miguel/Desktop/PSD/PSD_lab1/Lab1.srcs/sim_1/new/controlUnit_tb.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'controlUnit_tb'
+xvhdl --incr --relax -prj datapath_tb_vhdl.prj
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/miguel/Desktop/PSD/PSD_lab1/Lab1.sim/sim_1/behav/xsim'
+xelab -wto 0cd527afc77f4187a023976c892304b6 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot datapath_tb_behav xil_defaultlib.datapath_tb -log elaborate.log
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2020.1/bin/unwrapped/lnx64.o/xelab -wto 0cd527afc77f4187a023976c892304b6 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot datapath_tb_behav xil_defaultlib.datapath_tb -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+ERROR: [VRFC 10-664] expression has 0 elements ; expected 8 [/home/miguel/Desktop/PSD/PSD_lab1/Lab1.srcs/sources_1/new/datapath.vhd:77]
+ERROR: [XSIM 43-3321] Static elaboration of top level VHDL design unit datapath_tb in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-99] Step results log file:'/home/miguel/Desktop/PSD/PSD_lab1/Lab1.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or '/home/miguel/Desktop/PSD/PSD_lab1/Lab1.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+launch_simulation: Time (s): cpu = 00:00:10 ; elapsed = 00:00:09 . Memory (MB): peak = 7067.035 ; gain = 0.000 ; free physical = 1595 ; free virtual = 5351
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/miguel/Desktop/PSD/PSD_lab1/Lab1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'datapath_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/miguel/Desktop/PSD/PSD_lab1/Lab1.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj datapath_tb_vhdl.prj
 INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
 INFO: [USF-XSim-3] XSim::Elaborate design
 INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/miguel/Desktop/PSD/PSD_lab1/Lab1.sim/sim_1/behav/xsim'
-xelab -wto 0cd527afc77f4187a023976c892304b6 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot controlUnit_tb_behav xil_defaultlib.controlUnit_tb -log elaborate.log
+xelab -wto 0cd527afc77f4187a023976c892304b6 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot datapath_tb_behav xil_defaultlib.datapath_tb -log elaborate.log
 Vivado Simulator 2020.1
 Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
-Running: /tools/Xilinx/Vivado/2020.1/bin/unwrapped/lnx64.o/xelab -wto 0cd527afc77f4187a023976c892304b6 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot controlUnit_tb_behav xil_defaultlib.controlUnit_tb -log elaborate.log 
+Running: /tools/Xilinx/Vivado/2020.1/bin/unwrapped/lnx64.o/xelab -wto 0cd527afc77f4187a023976c892304b6 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot datapath_tb_behav xil_defaultlib.datapath_tb -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+ERROR: [VRFC 10-664] expression has 0 elements ; expected 8 [/home/miguel/Desktop/PSD/PSD_lab1/Lab1.srcs/sources_1/new/datapath.vhd:77]
+ERROR: [XSIM 43-3321] Static elaboration of top level VHDL design unit datapath_tb in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'/home/miguel/Desktop/PSD/PSD_lab1/Lab1.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or '/home/miguel/Desktop/PSD/PSD_lab1/Lab1.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+launch_simulation: Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 7069.035 ; gain = 0.000 ; free physical = 1580 ; free virtual = 5336
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+[Fri Oct  9 15:44:13 2020] Launched synth_1...
+Run output will be captured here: /home/miguel/Desktop/PSD/PSD_lab1/Lab1.runs/synth_1/runme.log
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a35tcpg236-1
+Top: finalCircuit
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 7097.176 ; gain = 0.000 ; free physical = 1143 ; free virtual = 4977
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'finalCircuit' [/home/miguel/Desktop/PSD/PSD_lab1/Lab1.srcs/sources_1/new/finalCircuit.vhd:44]
+INFO: [Synth 8-3491] module 'hex2disp' declared at '/home/miguel/Desktop/PSD/PSD_lab1/Lab1.srcs/sources_1/imports/lab0Files/hex2disp.vhd:14' bound to instance 'inst_hex3' of component 'hex2disp' [/home/miguel/Desktop/PSD/PSD_lab1/Lab1.srcs/sources_1/new/finalCircuit.vhd:100]
+INFO: [Synth 8-638] synthesizing module 'hex2disp' [/home/miguel/Desktop/PSD/PSD_lab1/Lab1.srcs/sources_1/imports/lab0Files/hex2disp.vhd:21]
+INFO: [Synth 8-256] done synthesizing module 'hex2disp' (1#1) [/home/miguel/Desktop/PSD/PSD_lab1/Lab1.srcs/sources_1/imports/lab0Files/hex2disp.vhd:21]
+INFO: [Synth 8-3491] module 'hex2disp' declared at '/home/miguel/Desktop/PSD/PSD_lab1/Lab1.srcs/sources_1/imports/lab0Files/hex2disp.vhd:14' bound to instance 'inst_hex2' of component 'hex2disp' [/home/miguel/Desktop/PSD/PSD_lab1/Lab1.srcs/sources_1/new/finalCircuit.vhd:103]
+INFO: [Synth 8-3491] module 'hex2disp' declared at '/home/miguel/Desktop/PSD/PSD_lab1/Lab1.srcs/sources_1/imports/lab0Files/hex2disp.vhd:14' bound to instance 'inst_hex1' of component 'hex2disp' [/home/miguel/Desktop/PSD/PSD_lab1/Lab1.srcs/sources_1/new/finalCircuit.vhd:106]
+INFO: [Synth 8-3491] module 'hex2disp' declared at '/home/miguel/Desktop/PSD/PSD_lab1/Lab1.srcs/sources_1/imports/lab0Files/hex2disp.vhd:14' bound to instance 'inst_hex0' of component 'hex2disp' [/home/miguel/Desktop/PSD/PSD_lab1/Lab1.srcs/sources_1/new/finalCircuit.vhd:109]
+INFO: [Synth 8-3491] module 'disp7' declared at '/home/miguel/Desktop/PSD/PSD_lab1/Lab1.srcs/sources_1/imports/lab0Files/disp7.vhd:9' bound to instance 'inst_disp7' of component 'disp7' [/home/miguel/Desktop/PSD/PSD_lab1/Lab1.srcs/sources_1/new/finalCircuit.vhd:113]
+INFO: [Synth 8-638] synthesizing module 'disp7' [/home/miguel/Desktop/PSD/PSD_lab1/Lab1.srcs/sources_1/imports/lab0Files/disp7.vhd:21]
+INFO: [Synth 8-256] done synthesizing module 'disp7' (2#1) [/home/miguel/Desktop/PSD/PSD_lab1/Lab1.srcs/sources_1/imports/lab0Files/disp7.vhd:21]
+INFO: [Synth 8-3491] module 'clkdiv' declared at '/home/miguel/Desktop/PSD/PSD_lab1/Lab1.srcs/sources_1/imports/lab0Files/clkdiv.vhd:9' bound to instance 'inst_clkdiv' of component 'clkdiv' [/home/miguel/Desktop/PSD/PSD_lab1/Lab1.srcs/sources_1/new/finalCircuit.vhd:127]
+INFO: [Synth 8-638] synthesizing module 'clkdiv' [/home/miguel/Desktop/PSD/PSD_lab1/Lab1.srcs/sources_1/imports/lab0Files/clkdiv.vhd:16]
+INFO: [Synth 8-113] binding component instance 'BUFG_INST1' to cell 'BUFG' [/home/miguel/Desktop/PSD/PSD_lab1/Lab1.srcs/sources_1/imports/lab0Files/clkdiv.vhd:41]
+INFO: [Synth 8-113] binding component instance 'BUFG_INST2' to cell 'BUFG' [/home/miguel/Desktop/PSD/PSD_lab1/Lab1.srcs/sources_1/imports/lab0Files/clkdiv.vhd:42]
+INFO: [Synth 8-256] done synthesizing module 'clkdiv' (3#1) [/home/miguel/Desktop/PSD/PSD_lab1/Lab1.srcs/sources_1/imports/lab0Files/clkdiv.vhd:16]
+INFO: [Synth 8-3491] module 'controlUnit' declared at '/home/miguel/Desktop/PSD/PSD_lab1/Lab1.srcs/sources_1/new/controlUnit.vhd:37' bound to instance 'inst_controlUnit' of component 'controlUnit' [/home/miguel/Desktop/PSD/PSD_lab1/Lab1.srcs/sources_1/new/finalCircuit.vhd:132]
+INFO: [Synth 8-638] synthesizing module 'controlUnit' [/home/miguel/Desktop/PSD/PSD_lab1/Lab1.srcs/sources_1/new/controlUnit.vhd:47]
+INFO: [Synth 8-256] done synthesizing module 'controlUnit' (4#1) [/home/miguel/Desktop/PSD/PSD_lab1/Lab1.srcs/sources_1/new/controlUnit.vhd:47]
+INFO: [Synth 8-3491] module 'datapath' declared at '/home/miguel/Desktop/PSD/PSD_lab1/Lab1.srcs/sources_1/new/datapath.vhd:37' bound to instance 'inst_datapath' of component 'datapath' [/home/miguel/Desktop/PSD/PSD_lab1/Lab1.srcs/sources_1/new/finalCircuit.vhd:141]
+INFO: [Synth 8-638] synthesizing module 'datapath' [/home/miguel/Desktop/PSD/PSD_lab1/Lab1.srcs/sources_1/new/datapath.vhd:48]
+INFO: [Synth 8-256] done synthesizing module 'datapath' (5#1) [/home/miguel/Desktop/PSD/PSD_lab1/Lab1.srcs/sources_1/new/datapath.vhd:48]
+INFO: [Synth 8-256] done synthesizing module 'finalCircuit' (6#1) [/home/miguel/Desktop/PSD/PSD_lab1/Lab1.srcs/sources_1/new/finalCircuit.vhd:44]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 7103.051 ; gain = 5.875 ; free physical = 1177 ; free virtual = 5012
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 7120.863 ; gain = 23.688 ; free physical = 1172 ; free virtual = 5007
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 7120.863 ; gain = 23.688 ; free physical = 1172 ; free virtual = 5007
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 7127.801 ; gain = 0.000 ; free physical = 1164 ; free virtual = 4999
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 7245.629 ; gain = 0.000 ; free physical = 1089 ; free virtual = 4924
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:25 ; elapsed = 00:00:19 . Memory (MB): peak = 7282.301 ; gain = 185.125 ; free physical = 1047 ; free virtual = 4887
+26 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:31 ; elapsed = 00:00:27 . Memory (MB): peak = 7282.301 ; gain = 185.125 ; free physical = 1047 ; free virtual = 4887
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/miguel/Desktop/PSD/PSD_lab1/Lab1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'datapath_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/miguel/Desktop/PSD/PSD_lab1/Lab1.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj datapath_tb_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/miguel/Desktop/PSD/PSD_lab1/Lab1.srcs/sources_1/new/datapath.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'datapath'
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/miguel/Desktop/PSD/PSD_lab1/Lab1.sim/sim_1/behav/xsim'
+xelab -wto 0cd527afc77f4187a023976c892304b6 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot datapath_tb_behav xil_defaultlib.datapath_tb -log elaborate.log
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2020.1/bin/unwrapped/lnx64.o/xelab -wto 0cd527afc77f4187a023976c892304b6 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot datapath_tb_behav xil_defaultlib.datapath_tb -log elaborate.log 
 Using 8 slave threads.
 Starting static elaboration
 Completed static elaboration
@@ -53,472 +168,13 @@ Compiling package std.textio
 Compiling package ieee.std_logic_1164
 Compiling package ieee.std_logic_arith
 Compiling package ieee.std_logic_unsigned
-Compiling architecture behavioral of entity xil_defaultlib.controlUnit [controlunit_default]
-Compiling architecture behaviour of entity xil_defaultlib.controlunit_tb
-Built simulation snapshot controlUnit_tb_behav
+Compiling architecture behavioral of entity xil_defaultlib.datapath [datapath_default]
+Compiling architecture behavior of entity xil_defaultlib.datapath_tb
+Built simulation snapshot datapath_tb_behav
 INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
 INFO: [USF-XSim-4] XSim::Simulate design
 INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/miguel/Desktop/PSD/PSD_lab1/Lab1.sim/sim_1/behav/xsim'
 INFO: [USF-XSim-98] *** Running xsim
-   with args "controlUnit_tb_behav -key {Behavioral:sim_1:Functional:controlUnit_tb} -tclbatch {controlUnit_tb.tcl} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
-Vivado Simulator 2020.1
-Time resolution is 1 ps
-source controlUnit_tb.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-# run 1000ns
-xsim: Time (s): cpu = 00:00:10 ; elapsed = 00:00:05 . Memory (MB): peak = 7118.562 ; gain = 93.859 ; free physical = 186 ; free virtual = 5400
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'controlUnit_tb_behav' loaded.
-INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-launch_simulation: Time (s): cpu = 00:00:16 ; elapsed = 00:00:12 . Memory (MB): peak = 7118.562 ; gain = 102.816 ; free physical = 185 ; free virtual = 5399
-restart
-INFO: [Simtcl 6-17] Simulation restarted
-run 450ns
-close_sim
-INFO: [Simtcl 6-16] Simulation closed
-import_files -norecurse {/home/miguel/Desktop/PSD/lab0Files/hex2disp.vhd /home/miguel/Desktop/PSD/lab0Files/disp7.vhd}
-import_files -norecurse /home/miguel/Desktop/PSD/lab0Files/clkdiv.vhd
-close [ open /home/miguel/Desktop/PSD/PSD_lab1/Lab1.srcs/sources_1/new/finalCircuit.vhd w ]
-add_files /home/miguel/Desktop/PSD/PSD_lab1/Lab1.srcs/sources_1/new/finalCircuit.vhd
-set_property top finalCircuit [current_fileset]
-reset_run synth_1
-launch_runs synth_1 -jobs 2
-[Fri Oct  9 12:12:19 2020] Launched synth_1...
-Run output will be captured here: /home/miguel/Desktop/PSD/PSD_lab1/Lab1.runs/synth_1/runme.log
-set_property is_enabled false [get_files  /home/miguel/Desktop/PSD/PSD_lab1/Lab1.srcs/sources_1/new/controlUnit.vhd]
-set_property is_enabled true [get_files  /home/miguel/Desktop/PSD/PSD_lab1/Lab1.srcs/sources_1/new/controlUnit.vhd]
-set_property used_in_synthesis true [get_files  /home/miguel/Desktop/PSD/PSD_lab1/Lab1.srcs/sources_1/new/controlUnit.vhd]
-reset_run synth_1
-launch_runs synth_1 -jobs 2
-[Fri Oct  9 12:15:50 2020] Launched synth_1...
-Run output will be captured here: /home/miguel/Desktop/PSD/PSD_lab1/Lab1.runs/synth_1/runme.log
-set_property SOURCE_SET sources_1 [get_filesets sim_1]
-close [ open /home/miguel/Desktop/PSD/PSD_lab1/Lab1.srcs/sim_1/new/finalCircuit_tb.vhd w ]
-add_files -fileset sim_1 /home/miguel/Desktop/PSD/PSD_lab1/Lab1.srcs/sim_1/new/finalCircuit_tb.vhd
-set_property top finalCircuit_tb [get_filesets sim_1]
-set_property top_lib xil_defaultlib [get_filesets sim_1]
-launch_simulation
-Command: launch_simulation 
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/miguel/Desktop/PSD/PSD_lab1/Lab1.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'finalCircuit_tb' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
-INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/miguel/Desktop/PSD/PSD_lab1/Lab1.sim/sim_1/behav/xsim'
-xvhdl --incr --relax -prj finalCircuit_tb_vhdl.prj
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/miguel/Desktop/PSD/PSD_lab1/Lab1.srcs/sources_1/imports/lab0Files/hex2disp.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'hex2disp'
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/miguel/Desktop/PSD/PSD_lab1/Lab1.srcs/sources_1/imports/lab0Files/disp7.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'disp7'
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/miguel/Desktop/PSD/PSD_lab1/Lab1.srcs/sources_1/imports/lab0Files/clkdiv.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'clkdiv'
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/miguel/Desktop/PSD/PSD_lab1/Lab1.srcs/sources_1/new/finalCircuit.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'finalCircuit'
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/miguel/Desktop/PSD/PSD_lab1/Lab1.srcs/sim_1/new/finalCircuit_tb.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'finalCircuit_tb'
-INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/miguel/Desktop/PSD/PSD_lab1/Lab1.sim/sim_1/behav/xsim'
-xelab -wto 0cd527afc77f4187a023976c892304b6 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot finalCircuit_tb_behav xil_defaultlib.finalCircuit_tb -log elaborate.log
-Vivado Simulator 2020.1
-Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
-Running: /tools/Xilinx/Vivado/2020.1/bin/unwrapped/lnx64.o/xelab -wto 0cd527afc77f4187a023976c892304b6 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot finalCircuit_tb_behav xil_defaultlib.finalCircuit_tb -log elaborate.log 
-Using 8 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling package std.standard
-Compiling package std.textio
-Compiling package ieee.std_logic_1164
-Compiling package ieee.std_logic_arith
-Compiling package ieee.std_logic_unsigned
-Compiling package ieee.numeric_std
-Compiling package unisim.vcomponents
-Compiling architecture behavioral of entity xil_defaultlib.hex2disp [hex2disp_default]
-Compiling architecture mixed of entity xil_defaultlib.disp7 [disp7_default]
-Compiling architecture bufg_v of entity unisim.BUFG [bufg_default]
-Compiling architecture mixed of entity xil_defaultlib.clkdiv [clkdiv_default]
-Compiling architecture behavioral of entity xil_defaultlib.controlUnit [controlunit_default]
-Compiling architecture behavioral of entity xil_defaultlib.datapath [datapath_default]
-Compiling architecture behavioral of entity xil_defaultlib.finalCircuit [finalcircuit_default]
-Compiling architecture behavioral of entity xil_defaultlib.finalcircuit_tb
-Built simulation snapshot finalCircuit_tb_behav
-
-****** Webtalk v2020.1 (64-bit)
-  **** SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
-  **** IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
-    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
-
-source /home/miguel/Desktop/PSD/PSD_lab1/Lab1.sim/sim_1/behav/xsim/xsim.dir/finalCircuit_tb_behav/webtalk/xsim_webtalk.tcl -notrace
-INFO: [Common 17-186] '/home/miguel/Desktop/PSD/PSD_lab1/Lab1.sim/sim_1/behav/xsim/xsim.dir/finalCircuit_tb_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Fri Oct  9 12:30:45 2020. For additional details about this file, please refer to the WebTalk help file at /tools/Xilinx/Vivado/2020.1/doc/webtalk_introduction.html.
-INFO: [Common 17-206] Exiting Webtalk at Fri Oct  9 12:30:45 2020...
-run_program: Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 7193.891 ; gain = 0.000 ; free physical = 1047 ; free virtual = 5294
-INFO: [USF-XSim-69] 'elaborate' step finished in '7' seconds
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/miguel/Desktop/PSD/PSD_lab1/Lab1.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "finalCircuit_tb_behav -key {Behavioral:sim_1:Functional:finalCircuit_tb} -tclbatch {finalCircuit_tb.tcl} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
-Vivado Simulator 2020.1
-Time resolution is 1 ps
-source finalCircuit_tb.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-# run 1000ns
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'finalCircuit_tb_behav' loaded.
-INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-launch_simulation: Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 7273.719 ; gain = 79.828 ; free physical = 1032 ; free virtual = 5287
-restart
-INFO: [Simtcl 6-17] Simulation restarted
-run 500ns
-restart
-INFO: [Simtcl 6-17] Simulation restarted
-run 100000ns
-close_sim
-INFO: [Simtcl 6-16] Simulation closed
-close_sim: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 7276.719 ; gain = 0.000 ; free physical = 1247 ; free virtual = 5441
-launch_simulation -mode post-synthesis -type functional
-Command: launch_simulation -mode post-synthesis -type functional
-INFO: [Vivado 12-5682] Launching post-synthesis functional simulation in '/home/miguel/Desktop/PSD/PSD_lab1/Lab1.sim/sim_1/synth/func/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-Design is defaulting to impl run constrset: constrs_1
-Design is defaulting to synth run part: xc7a35tcpg236-1
-INFO: [Device 21-403] Loading part xc7a35tcpg236-1
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 7276.719 ; gain = 0.000 ; free physical = 1013 ; free virtual = 5208
-INFO: [Netlist 29-17] Analyzing 34 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
-INFO: [Project 1-479] Netlist was created with Vivado 2020.1
-INFO: [Project 1-570] Preparing netlist for logic optimization
-INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 7276.719 ; gain = 0.000 ; free physical = 932 ; free virtual = 5126
-INFO: [Project 1-111] Unisim Transformation Summary:
-No Unisim elements were transformed.
-
-open_run: Time (s): cpu = 00:00:14 ; elapsed = 00:00:11 . Memory (MB): peak = 7276.719 ; gain = 0.000 ; free physical = 915 ; free virtual = 5116
-INFO: [SIM-utils-24] Writing simulation netlist file for design 'synth_1'...
-INFO: [SIM-utils-25] write_verilog -mode funcsim -nolib -force -file "/home/miguel/Desktop/PSD/PSD_lab1/Lab1.sim/sim_1/synth/func/xsim/finalCircuit_tb_func_synth.v"
-INFO: [SIM-utils-36] Netlist generated:/home/miguel/Desktop/PSD/PSD_lab1/Lab1.sim/sim_1/synth/func/xsim/finalCircuit_tb_func_synth.v
-INFO: [SIM-utils-54] Inspecting design source files for 'finalCircuit_tb' in fileset 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/miguel/Desktop/PSD/PSD_lab1/Lab1.sim/sim_1/synth/func/xsim'
-xvlog --incr --relax -prj finalCircuit_tb_vlog.prj
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/miguel/Desktop/PSD/PSD_lab1/Lab1.sim/sim_1/synth/func/xsim/finalCircuit_tb_func_synth.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module clkdiv
-INFO: [VRFC 10-311] analyzing module controlUnit
-INFO: [VRFC 10-311] analyzing module datapath
-INFO: [VRFC 10-311] analyzing module disp7
-INFO: [VRFC 10-311] analyzing module finalCircuit
-INFO: [VRFC 10-311] analyzing module glbl
-xvhdl --incr --relax -prj finalCircuit_tb_vhdl.prj
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/miguel/Desktop/PSD/PSD_lab1/Lab1.srcs/sim_1/new/controlUnit_tb.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'controlUnit_tb'
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/miguel/Desktop/PSD/PSD_lab1/Lab1.srcs/sim_1/new/finalCircuit_tb.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'finalCircuit_tb'
-INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/miguel/Desktop/PSD/PSD_lab1/Lab1.sim/sim_1/synth/func/xsim'
-xelab -wto 0cd527afc77f4187a023976c892304b6 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L secureip --snapshot finalCircuit_tb_func_synth xil_defaultlib.finalCircuit_tb xil_defaultlib.glbl -log elaborate.log
-Vivado Simulator 2020.1
-Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
-Running: /tools/Xilinx/Vivado/2020.1/bin/unwrapped/lnx64.o/xelab -wto 0cd527afc77f4187a023976c892304b6 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L secureip --snapshot finalCircuit_tb_func_synth xil_defaultlib.finalCircuit_tb xil_defaultlib.glbl -log elaborate.log 
-Using 8 slave threads.
-Starting static elaboration
-Pass Through NonSizing Optimizer
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling package std.standard
-Compiling package std.textio
-Compiling package ieee.std_logic_1164
-Compiling package vl.vl_types
-Compiling module xil_defaultlib.glbl
-Compiling module unisims_ver.OBUF
-Compiling module unisims_ver.BUFG
-Compiling module unisims_ver.IBUF
-Compiling module unisims_ver.LUT4
-Compiling module unisims_ver.LUT6
-Compiling module unisims_ver.x_lut1_mux2
-Compiling module unisims_ver.LUT1
-Compiling module unisims_ver.FDRE_default
-Compiling module unisims_ver.CARRY4
-Compiling module xil_defaultlib.clkdiv
-Compiling module unisims_ver.x_lut3_mux8
-Compiling module unisims_ver.LUT3
-Compiling module unisims_ver.x_lut2_mux4
-Compiling module unisims_ver.LUT2
-Compiling module unisims_ver.LUT5
-Compiling module unisims_ver.FDPE_default
-Compiling module unisims_ver.FDCE_default
-Compiling module unisims_ver.MUXF8
-Compiling module unisims_ver.MUXF7
-Compiling module xil_defaultlib.controlUnit
-Compiling module xil_defaultlib.datapath
-Compiling module xil_defaultlib.disp7
-Compiling module xil_defaultlib.finalCircuit
-Compiling architecture behavioral of entity xil_defaultlib.finalcircuit_tb
-Built simulation snapshot finalCircuit_tb_func_synth
-
-****** Webtalk v2020.1 (64-bit)
-  **** SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
-  **** IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
-    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
-
-source /home/miguel/Desktop/PSD/PSD_lab1/Lab1.sim/sim_1/synth/func/xsim/xsim.dir/finalCircuit_tb_func_synth/webtalk/xsim_webtalk.tcl -notrace
-INFO: [Common 17-186] '/home/miguel/Desktop/PSD/PSD_lab1/Lab1.sim/sim_1/synth/func/xsim/xsim.dir/finalCircuit_tb_func_synth/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Fri Oct  9 13:14:54 2020. For additional details about this file, please refer to the WebTalk help file at /tools/Xilinx/Vivado/2020.1/doc/webtalk_introduction.html.
-INFO: [Common 17-206] Exiting Webtalk at Fri Oct  9 13:14:54 2020...
-run_program: Time (s): cpu = 00:00:12 ; elapsed = 00:00:09 . Memory (MB): peak = 7607.312 ; gain = 321.078 ; free physical = 508 ; free virtual = 4770
-INFO: [USF-XSim-69] 'elaborate' step finished in '9' seconds
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/miguel/Desktop/PSD/PSD_lab1/Lab1.sim/sim_1/synth/func/xsim'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "finalCircuit_tb_func_synth -key {Post-Synthesis:sim_1:Functional:finalCircuit_tb} -tclbatch {finalCircuit_tb.tcl} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
-Vivado Simulator 2020.1
-Time resolution is 1 ps
-source finalCircuit_tb.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-# run 1000ns
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'finalCircuit_tb_func_synth' loaded.
-INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-launch_simulation: Time (s): cpu = 00:00:42 ; elapsed = 00:00:28 . Memory (MB): peak = 7677.746 ; gain = 401.027 ; free physical = 485 ; free virtual = 4751
-restart
-INFO: [Simtcl 6-17] Simulation restarted
-run 1000ns
-restart
-INFO: [Simtcl 6-17] Simulation restarted
-run 1000ns
-close_sim
-INFO: [Simtcl 6-16] Simulation closed
-close_sim: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 7677.746 ; gain = 0.000 ; free physical = 439 ; free virtual = 4702
-close_design
-launch_simulation
-Command: launch_simulation 
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/miguel/Desktop/PSD/PSD_lab1/Lab1.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'finalCircuit_tb' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
-INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/miguel/Desktop/PSD/PSD_lab1/Lab1.sim/sim_1/behav/xsim'
-xvhdl --incr --relax -prj finalCircuit_tb_vhdl.prj
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/miguel/Desktop/PSD/PSD_lab1/Lab1.srcs/sim_1/new/finalCircuit_tb.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'finalCircuit_tb'
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/miguel/Desktop/PSD/PSD_lab1/Lab1.sim/sim_1/behav/xsim'
-xelab -wto 0cd527afc77f4187a023976c892304b6 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot finalCircuit_tb_behav xil_defaultlib.finalCircuit_tb -log elaborate.log
-Vivado Simulator 2020.1
-Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
-Running: /tools/Xilinx/Vivado/2020.1/bin/unwrapped/lnx64.o/xelab -wto 0cd527afc77f4187a023976c892304b6 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot finalCircuit_tb_behav xil_defaultlib.finalCircuit_tb -log elaborate.log 
-Using 8 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling package std.standard
-Compiling package std.textio
-Compiling package ieee.std_logic_1164
-Compiling package ieee.std_logic_arith
-Compiling package ieee.std_logic_unsigned
-Compiling package ieee.numeric_std
-Compiling package unisim.vcomponents
-Compiling architecture behavioral of entity xil_defaultlib.hex2disp [hex2disp_default]
-Compiling architecture mixed of entity xil_defaultlib.disp7 [disp7_default]
-Compiling architecture bufg_v of entity unisim.BUFG [bufg_default]
-Compiling architecture mixed of entity xil_defaultlib.clkdiv [clkdiv_default]
-Compiling architecture behavioral of entity xil_defaultlib.controlUnit [controlunit_default]
-Compiling architecture behavioral of entity xil_defaultlib.datapath [datapath_default]
-Compiling architecture behavioral of entity xil_defaultlib.finalCircuit [finalcircuit_default]
-Compiling architecture behavioral of entity xil_defaultlib.finalcircuit_tb
-Built simulation snapshot finalCircuit_tb_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/miguel/Desktop/PSD/PSD_lab1/Lab1.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "finalCircuit_tb_behav -key {Behavioral:sim_1:Functional:finalCircuit_tb} -tclbatch {finalCircuit_tb.tcl} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
-Vivado Simulator 2020.1
-Time resolution is 1 ps
-source finalCircuit_tb.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-# run 1000ns
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'finalCircuit_tb_behav' loaded.
-INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-launch_simulation: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 7677.746 ; gain = 0.000 ; free physical = 450 ; free virtual = 4712
-restart
-INFO: [Simtcl 6-17] Simulation restarted
-run 1000ns
-close_sim
-INFO: [Simtcl 6-16] Simulation closed
-launch_simulation
-Command: launch_simulation 
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/miguel/Desktop/PSD/PSD_lab1/Lab1.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'finalCircuit_tb' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
-INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/miguel/Desktop/PSD/PSD_lab1/Lab1.sim/sim_1/behav/xsim'
-xvhdl --incr --relax -prj finalCircuit_tb_vhdl.prj
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/miguel/Desktop/PSD/PSD_lab1/Lab1.srcs/sim_1/new/finalCircuit_tb.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'finalCircuit_tb'
-INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/miguel/Desktop/PSD/PSD_lab1/Lab1.sim/sim_1/behav/xsim'
-xelab -wto 0cd527afc77f4187a023976c892304b6 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot finalCircuit_tb_behav xil_defaultlib.finalCircuit_tb -log elaborate.log
-Vivado Simulator 2020.1
-Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
-Running: /tools/Xilinx/Vivado/2020.1/bin/unwrapped/lnx64.o/xelab -wto 0cd527afc77f4187a023976c892304b6 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot finalCircuit_tb_behav xil_defaultlib.finalCircuit_tb -log elaborate.log 
-Using 8 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling package std.standard
-Compiling package std.textio
-Compiling package ieee.std_logic_1164
-Compiling package ieee.std_logic_arith
-Compiling package ieee.std_logic_unsigned
-Compiling package ieee.numeric_std
-Compiling package unisim.vcomponents
-Compiling architecture behavioral of entity xil_defaultlib.hex2disp [hex2disp_default]
-Compiling architecture mixed of entity xil_defaultlib.disp7 [disp7_default]
-Compiling architecture bufg_v of entity unisim.BUFG [bufg_default]
-Compiling architecture mixed of entity xil_defaultlib.clkdiv [clkdiv_default]
-Compiling architecture behavioral of entity xil_defaultlib.controlUnit [controlunit_default]
-Compiling architecture behavioral of entity xil_defaultlib.datapath [datapath_default]
-Compiling architecture behavioral of entity xil_defaultlib.finalCircuit [finalcircuit_default]
-Compiling architecture behavioral of entity xil_defaultlib.finalcircuit_tb
-Built simulation snapshot finalCircuit_tb_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/miguel/Desktop/PSD/PSD_lab1/Lab1.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "finalCircuit_tb_behav -key {Behavioral:sim_1:Functional:finalCircuit_tb} -tclbatch {finalCircuit_tb.tcl} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
-Vivado Simulator 2020.1
-Time resolution is 1 ps
-source finalCircuit_tb.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-# run 1000ns
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'finalCircuit_tb_behav' loaded.
-INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-launch_simulation: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 7677.746 ; gain = 0.000 ; free physical = 497 ; free virtual = 4816
-restart
-INFO: [Simtcl 6-17] Simulation restarted
-run
-restart
-INFO: [Simtcl 6-17] Simulation restarted
-run 1000ns
-close_sim
-INFO: [Simtcl 6-16] Simulation closed
-set_property SOURCE_SET sources_1 [get_filesets sim_1]
-close [ open /home/miguel/Desktop/PSD/PSD_lab1/Lab1.srcs/sim_1/new/datapath_tb.v w ]
-add_files -fileset sim_1 /home/miguel/Desktop/PSD/PSD_lab1/Lab1.srcs/sim_1/new/datapath_tb.v
-set_property top datapath_tb [get_filesets sim_1]
-set_property top_lib xil_defaultlib [get_filesets sim_1]
-export_ip_user_files -of_objects  [get_files /home/miguel/Desktop/PSD/PSD_lab1/Lab1.srcs/sim_1/new/datapath_tb.v] -no_script -reset -force -quiet
-remove_files  -fileset sim_1 /home/miguel/Desktop/PSD/PSD_lab1/Lab1.srcs/sim_1/new/datapath_tb.v
-file delete -force /home/miguel/Desktop/PSD/PSD_lab1/Lab1.srcs/sim_1/new/datapath_tb.v
-set_property SOURCE_SET sources_1 [get_filesets sim_1]
-close [ open /home/miguel/Desktop/PSD/PSD_lab1/Lab1.srcs/sim_1/new/datapath_tb.vhd w ]
-add_files -fileset sim_1 /home/miguel/Desktop/PSD/PSD_lab1/Lab1.srcs/sim_1/new/datapath_tb.vhd
-launch_simulation
-Command: launch_simulation 
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/miguel/Desktop/PSD/PSD_lab1/Lab1.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'datapath_tb' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
-INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/miguel/Desktop/PSD/PSD_lab1/Lab1.sim/sim_1/behav/xsim'
-xvhdl --incr --relax -prj datapath_tb_vhdl.prj
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/miguel/Desktop/PSD/PSD_lab1/Lab1.srcs/sim_1/new/datapath_tb.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'datapath_tb'
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/miguel/Desktop/PSD/PSD_lab1/Lab1.sim/sim_1/behav/xsim'
-xelab -wto 0cd527afc77f4187a023976c892304b6 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot datapath_tb_behav xil_defaultlib.datapath_tb -log elaborate.log
-Vivado Simulator 2020.1
-Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
-Running: /tools/Xilinx/Vivado/2020.1/bin/unwrapped/lnx64.o/xelab -wto 0cd527afc77f4187a023976c892304b6 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot datapath_tb_behav xil_defaultlib.datapath_tb -log elaborate.log 
-Using 8 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling package std.standard
-Compiling package std.textio
-Compiling package ieee.std_logic_1164
-Compiling package ieee.std_logic_arith
-Compiling package ieee.std_logic_unsigned
-Compiling architecture behavioral of entity xil_defaultlib.datapath [datapath_default]
-Compiling architecture behavior of entity xil_defaultlib.datapath_tb
-Built simulation snapshot datapath_tb_behav
-
-****** Webtalk v2020.1 (64-bit)
-  **** SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
-  **** IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
-    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
-
-source /home/miguel/Desktop/PSD/PSD_lab1/Lab1.sim/sim_1/behav/xsim/xsim.dir/datapath_tb_behav/webtalk/xsim_webtalk.tcl -notrace
-INFO: [Common 17-186] '/home/miguel/Desktop/PSD/PSD_lab1/Lab1.sim/sim_1/behav/xsim/xsim.dir/datapath_tb_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Fri Oct  9 13:44:47 2020. For additional details about this file, please refer to the WebTalk help file at /tools/Xilinx/Vivado/2020.1/doc/webtalk_introduction.html.
-INFO: [Common 17-206] Exiting Webtalk at Fri Oct  9 13:44:47 2020...
-run_program: Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 7677.746 ; gain = 0.000 ; free physical = 362 ; free virtual = 4773
-INFO: [USF-XSim-69] 'elaborate' step finished in '6' seconds
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/miguel/Desktop/PSD/PSD_lab1/Lab1.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-98] *** Running xsim
    with args "datapath_tb_behav -key {Behavioral:sim_1:Functional:datapath_tb} -tclbatch {datapath_tb.tcl} -log {simulate.log}"
 INFO: [USF-XSim-8] Loading simulator feature
 Vivado Simulator 2020.1
@@ -534,540 +190,7 @@ source datapath_tb.tcl
 #   }
 # }
 # run 1000ns
+xsim: Time (s): cpu = 00:00:10 ; elapsed = 00:00:05 . Memory (MB): peak = 7340.965 ; gain = 58.664 ; free physical = 981 ; free virtual = 4889
 INFO: [USF-XSim-96] XSim completed. Design snapshot 'datapath_tb_behav' loaded.
 INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-launch_simulation: Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 7718.059 ; gain = 40.312 ; free physical = 397 ; free virtual = 4813
-close_sim
-INFO: [Simtcl 6-16] Simulation closed
-close_sim: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 7718.059 ; gain = 0.000 ; free physical = 406 ; free virtual = 4817
-launch_simulation
-Command: launch_simulation 
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/miguel/Desktop/PSD/PSD_lab1/Lab1.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'datapath_tb' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
-INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/miguel/Desktop/PSD/PSD_lab1/Lab1.sim/sim_1/behav/xsim'
-xvhdl --incr --relax -prj datapath_tb_vhdl.prj
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/miguel/Desktop/PSD/PSD_lab1/Lab1.srcs/sim_1/new/datapath_tb.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'datapath_tb'
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/miguel/Desktop/PSD/PSD_lab1/Lab1.sim/sim_1/behav/xsim'
-xelab -wto 0cd527afc77f4187a023976c892304b6 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot datapath_tb_behav xil_defaultlib.datapath_tb -log elaborate.log
-Vivado Simulator 2020.1
-Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
-Running: /tools/Xilinx/Vivado/2020.1/bin/unwrapped/lnx64.o/xelab -wto 0cd527afc77f4187a023976c892304b6 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot datapath_tb_behav xil_defaultlib.datapath_tb -log elaborate.log 
-Using 8 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling package std.standard
-Compiling package std.textio
-Compiling package ieee.std_logic_1164
-Compiling package ieee.std_logic_arith
-Compiling package ieee.std_logic_unsigned
-Compiling architecture behavioral of entity xil_defaultlib.datapath [datapath_default]
-Compiling architecture behavior of entity xil_defaultlib.datapath_tb
-Built simulation snapshot datapath_tb_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/miguel/Desktop/PSD/PSD_lab1/Lab1.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "datapath_tb_behav -key {Behavioral:sim_1:Functional:datapath_tb} -tclbatch {datapath_tb.tcl} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
-Vivado Simulator 2020.1
-Time resolution is 1 ps
-source datapath_tb.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-# run 1000ns
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'datapath_tb_behav' loaded.
-INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-launch_simulation: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 7718.059 ; gain = 0.000 ; free physical = 391 ; free virtual = 4805
-restart
-INFO: [Simtcl 6-17] Simulation restarted
-run 1000ns
-close_sim
-INFO: [Simtcl 6-16] Simulation closed
-launch_simulation
-Command: launch_simulation 
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/miguel/Desktop/PSD/PSD_lab1/Lab1.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'datapath_tb' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
-INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/miguel/Desktop/PSD/PSD_lab1/Lab1.sim/sim_1/behav/xsim'
-xvhdl --incr --relax -prj datapath_tb_vhdl.prj
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/miguel/Desktop/PSD/PSD_lab1/Lab1.srcs/sim_1/new/datapath_tb.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'datapath_tb'
-INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/miguel/Desktop/PSD/PSD_lab1/Lab1.sim/sim_1/behav/xsim'
-xelab -wto 0cd527afc77f4187a023976c892304b6 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot datapath_tb_behav xil_defaultlib.datapath_tb -log elaborate.log
-Vivado Simulator 2020.1
-Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
-Running: /tools/Xilinx/Vivado/2020.1/bin/unwrapped/lnx64.o/xelab -wto 0cd527afc77f4187a023976c892304b6 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot datapath_tb_behav xil_defaultlib.datapath_tb -log elaborate.log 
-Using 8 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling package std.standard
-Compiling package std.textio
-Compiling package ieee.std_logic_1164
-Compiling package ieee.std_logic_arith
-Compiling package ieee.std_logic_unsigned
-Compiling architecture behavioral of entity xil_defaultlib.datapath [datapath_default]
-Compiling architecture behavior of entity xil_defaultlib.datapath_tb
-Built simulation snapshot datapath_tb_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/miguel/Desktop/PSD/PSD_lab1/Lab1.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "datapath_tb_behav -key {Behavioral:sim_1:Functional:datapath_tb} -tclbatch {datapath_tb.tcl} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
-Vivado Simulator 2020.1
-Time resolution is 1 ps
-source datapath_tb.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-# run 1000ns
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'datapath_tb_behav' loaded.
-INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 7719.055 ; gain = 0.000 ; free physical = 377 ; free virtual = 4797
-close_sim
-INFO: [Simtcl 6-16] Simulation closed
-close_project
-INFO: [filemgmt 56-326] User Interrupt. Could not getCurrentGraph()
-open_project /home/miguel/Desktop/PSD/PSD_lab1/Lab1.xpr
-Scanning sources...
-Finished scanning sources
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1704] No user IP repositories specified
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2020.1/data/ip'.
-launch_simulation
-Command: launch_simulation 
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/miguel/Desktop/PSD/PSD_lab1/Lab1.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'datapath_tb' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
-INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/miguel/Desktop/PSD/PSD_lab1/Lab1.sim/sim_1/behav/xsim'
-xvhdl --incr --relax -prj datapath_tb_vhdl.prj
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/miguel/Desktop/PSD/PSD_lab1/Lab1.srcs/sim_1/new/datapath_tb.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'datapath_tb'
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/miguel/Desktop/PSD/PSD_lab1/Lab1.sim/sim_1/behav/xsim'
-xelab -wto 0cd527afc77f4187a023976c892304b6 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot datapath_tb_behav xil_defaultlib.datapath_tb -log elaborate.log
-Vivado Simulator 2020.1
-Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
-Running: /tools/Xilinx/Vivado/2020.1/bin/unwrapped/lnx64.o/xelab -wto 0cd527afc77f4187a023976c892304b6 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot datapath_tb_behav xil_defaultlib.datapath_tb -log elaborate.log 
-Using 8 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling package std.standard
-Compiling package std.textio
-Compiling package ieee.std_logic_1164
-Compiling package ieee.std_logic_arith
-Compiling package ieee.std_logic_unsigned
-Compiling architecture behavioral of entity xil_defaultlib.datapath [datapath_default]
-Compiling architecture behavior of entity xil_defaultlib.datapath_tb
-Built simulation snapshot datapath_tb_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/miguel/Desktop/PSD/PSD_lab1/Lab1.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "datapath_tb_behav -key {Behavioral:sim_1:Functional:datapath_tb} -tclbatch {datapath_tb.tcl} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
-Vivado Simulator 2020.1
-Time resolution is 1 ps
-source datapath_tb.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-# run 1000ns
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'datapath_tb_behav' loaded.
-INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 7719.055 ; gain = 0.000 ; free physical = 420 ; free virtual = 4803
-close_sim
-INFO: [Simtcl 6-16] Simulation closed
-launch_simulation
-Command: launch_simulation 
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/miguel/Desktop/PSD/PSD_lab1/Lab1.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'datapath_tb' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
-INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/miguel/Desktop/PSD/PSD_lab1/Lab1.sim/sim_1/behav/xsim'
-xvhdl --incr --relax -prj datapath_tb_vhdl.prj
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/miguel/Desktop/PSD/PSD_lab1/Lab1.srcs/sim_1/new/datapath_tb.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'datapath_tb'
-INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/miguel/Desktop/PSD/PSD_lab1/Lab1.sim/sim_1/behav/xsim'
-xelab -wto 0cd527afc77f4187a023976c892304b6 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot datapath_tb_behav xil_defaultlib.datapath_tb -log elaborate.log
-Vivado Simulator 2020.1
-Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
-Running: /tools/Xilinx/Vivado/2020.1/bin/unwrapped/lnx64.o/xelab -wto 0cd527afc77f4187a023976c892304b6 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot datapath_tb_behav xil_defaultlib.datapath_tb -log elaborate.log 
-Using 8 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling package std.standard
-Compiling package std.textio
-Compiling package ieee.std_logic_1164
-Compiling package ieee.std_logic_arith
-Compiling package ieee.std_logic_unsigned
-Compiling architecture behavioral of entity xil_defaultlib.datapath [datapath_default]
-Compiling architecture behavior of entity xil_defaultlib.datapath_tb
-Built simulation snapshot datapath_tb_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/miguel/Desktop/PSD/PSD_lab1/Lab1.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "datapath_tb_behav -key {Behavioral:sim_1:Functional:datapath_tb} -tclbatch {datapath_tb.tcl} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
-Vivado Simulator 2020.1
-Time resolution is 1 ps
-source datapath_tb.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-# run 1000ns
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'datapath_tb_behav' loaded.
-INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 7719.055 ; gain = 0.000 ; free physical = 573 ; free virtual = 4958
-close_sim
-INFO: [Simtcl 6-16] Simulation closed
-launch_simulation
-Command: launch_simulation 
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/miguel/Desktop/PSD/PSD_lab1/Lab1.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'datapath_tb' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
-INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/miguel/Desktop/PSD/PSD_lab1/Lab1.sim/sim_1/behav/xsim'
-xvhdl --incr --relax -prj datapath_tb_vhdl.prj
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/miguel/Desktop/PSD/PSD_lab1/Lab1.srcs/sim_1/new/datapath_tb.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'datapath_tb'
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/miguel/Desktop/PSD/PSD_lab1/Lab1.sim/sim_1/behav/xsim'
-xelab -wto 0cd527afc77f4187a023976c892304b6 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot datapath_tb_behav xil_defaultlib.datapath_tb -log elaborate.log
-Vivado Simulator 2020.1
-Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
-Running: /tools/Xilinx/Vivado/2020.1/bin/unwrapped/lnx64.o/xelab -wto 0cd527afc77f4187a023976c892304b6 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot datapath_tb_behav xil_defaultlib.datapath_tb -log elaborate.log 
-Using 8 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling package std.standard
-Compiling package std.textio
-Compiling package ieee.std_logic_1164
-Compiling package ieee.std_logic_arith
-Compiling package ieee.std_logic_unsigned
-Compiling architecture behavioral of entity xil_defaultlib.datapath [datapath_default]
-Compiling architecture behavior of entity xil_defaultlib.datapath_tb
-Built simulation snapshot datapath_tb_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/miguel/Desktop/PSD/PSD_lab1/Lab1.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "datapath_tb_behav -key {Behavioral:sim_1:Functional:datapath_tb} -tclbatch {datapath_tb.tcl} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
-Vivado Simulator 2020.1
-Time resolution is 1 ps
-source datapath_tb.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-# run 1000ns
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'datapath_tb_behav' loaded.
-INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-launch_simulation: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 7719.055 ; gain = 0.000 ; free physical = 578 ; free virtual = 4951
-close_sim
-INFO: [Simtcl 6-16] Simulation closed
-launch_simulation
-Command: launch_simulation 
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/miguel/Desktop/PSD/PSD_lab1/Lab1.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'datapath_tb' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
-INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/miguel/Desktop/PSD/PSD_lab1/Lab1.sim/sim_1/behav/xsim'
-xvhdl --incr --relax -prj datapath_tb_vhdl.prj
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/miguel/Desktop/PSD/PSD_lab1/Lab1.srcs/sim_1/new/datapath_tb.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'datapath_tb'
-INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/miguel/Desktop/PSD/PSD_lab1/Lab1.sim/sim_1/behav/xsim'
-xelab -wto 0cd527afc77f4187a023976c892304b6 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot datapath_tb_behav xil_defaultlib.datapath_tb -log elaborate.log
-Vivado Simulator 2020.1
-Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
-Running: /tools/Xilinx/Vivado/2020.1/bin/unwrapped/lnx64.o/xelab -wto 0cd527afc77f4187a023976c892304b6 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot datapath_tb_behav xil_defaultlib.datapath_tb -log elaborate.log 
-Using 8 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling package std.standard
-Compiling package std.textio
-Compiling package ieee.std_logic_1164
-Compiling package ieee.std_logic_arith
-Compiling package ieee.std_logic_unsigned
-Compiling architecture behavioral of entity xil_defaultlib.datapath [datapath_default]
-Compiling architecture behavior of entity xil_defaultlib.datapath_tb
-Built simulation snapshot datapath_tb_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/miguel/Desktop/PSD/PSD_lab1/Lab1.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "datapath_tb_behav -key {Behavioral:sim_1:Functional:datapath_tb} -tclbatch {datapath_tb.tcl} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
-Vivado Simulator 2020.1
-Time resolution is 1 ps
-source datapath_tb.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-# run 1000ns
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'datapath_tb_behav' loaded.
-INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-launch_simulation: Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 7719.055 ; gain = 0.000 ; free physical = 480 ; free virtual = 4864
-close_sim
-INFO: [Simtcl 6-16] Simulation closed
-launch_simulation
-Command: launch_simulation 
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/miguel/Desktop/PSD/PSD_lab1/Lab1.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'datapath_tb' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
-INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/miguel/Desktop/PSD/PSD_lab1/Lab1.sim/sim_1/behav/xsim'
-xvhdl --incr --relax -prj datapath_tb_vhdl.prj
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/miguel/Desktop/PSD/PSD_lab1/Lab1.srcs/sim_1/new/datapath_tb.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'datapath_tb'
-INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/miguel/Desktop/PSD/PSD_lab1/Lab1.sim/sim_1/behav/xsim'
-xelab -wto 0cd527afc77f4187a023976c892304b6 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot datapath_tb_behav xil_defaultlib.datapath_tb -log elaborate.log
-Vivado Simulator 2020.1
-Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
-Running: /tools/Xilinx/Vivado/2020.1/bin/unwrapped/lnx64.o/xelab -wto 0cd527afc77f4187a023976c892304b6 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot datapath_tb_behav xil_defaultlib.datapath_tb -log elaborate.log 
-Using 8 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling package std.standard
-Compiling package std.textio
-Compiling package ieee.std_logic_1164
-Compiling package ieee.std_logic_arith
-Compiling package ieee.std_logic_unsigned
-Compiling architecture behavioral of entity xil_defaultlib.datapath [datapath_default]
-Compiling architecture behavior of entity xil_defaultlib.datapath_tb
-Built simulation snapshot datapath_tb_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/miguel/Desktop/PSD/PSD_lab1/Lab1.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "datapath_tb_behav -key {Behavioral:sim_1:Functional:datapath_tb} -tclbatch {datapath_tb.tcl} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
-Vivado Simulator 2020.1
-Time resolution is 1 ps
-source datapath_tb.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-# run 1000ns
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'datapath_tb_behav' loaded.
-INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-launch_simulation: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 7719.055 ; gain = 0.000 ; free physical = 517 ; free virtual = 4904
-close_sim
-INFO: [Simtcl 6-16] Simulation closed
-launch_simulation
-Command: launch_simulation 
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/miguel/Desktop/PSD/PSD_lab1/Lab1.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'datapath_tb' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
-INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/miguel/Desktop/PSD/PSD_lab1/Lab1.sim/sim_1/behav/xsim'
-xvhdl --incr --relax -prj datapath_tb_vhdl.prj
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/miguel/Desktop/PSD/PSD_lab1/Lab1.srcs/sim_1/new/datapath_tb.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'datapath_tb'
-INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/miguel/Desktop/PSD/PSD_lab1/Lab1.sim/sim_1/behav/xsim'
-xelab -wto 0cd527afc77f4187a023976c892304b6 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot datapath_tb_behav xil_defaultlib.datapath_tb -log elaborate.log
-Vivado Simulator 2020.1
-Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
-Running: /tools/Xilinx/Vivado/2020.1/bin/unwrapped/lnx64.o/xelab -wto 0cd527afc77f4187a023976c892304b6 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot datapath_tb_behav xil_defaultlib.datapath_tb -log elaborate.log 
-Using 8 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling package std.standard
-Compiling package std.textio
-Compiling package ieee.std_logic_1164
-Compiling package ieee.std_logic_arith
-Compiling package ieee.std_logic_unsigned
-Compiling architecture behavioral of entity xil_defaultlib.datapath [datapath_default]
-Compiling architecture behavior of entity xil_defaultlib.datapath_tb
-Built simulation snapshot datapath_tb_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/miguel/Desktop/PSD/PSD_lab1/Lab1.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "datapath_tb_behav -key {Behavioral:sim_1:Functional:datapath_tb} -tclbatch {datapath_tb.tcl} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
-Vivado Simulator 2020.1
-Time resolution is 1 ps
-source datapath_tb.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-# run 1000ns
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'datapath_tb_behav' loaded.
-INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-launch_simulation: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 7719.055 ; gain = 0.000 ; free physical = 232 ; free virtual = 4664
-close_sim
-INFO: [Simtcl 6-16] Simulation closed
-launch_simulation
-Command: launch_simulation 
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/miguel/Desktop/PSD/PSD_lab1/Lab1.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'datapath_tb' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
-INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/miguel/Desktop/PSD/PSD_lab1/Lab1.sim/sim_1/behav/xsim'
-xvhdl --incr --relax -prj datapath_tb_vhdl.prj
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/miguel/Desktop/PSD/PSD_lab1/Lab1.srcs/sim_1/new/datapath_tb.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'datapath_tb'
-INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/miguel/Desktop/PSD/PSD_lab1/Lab1.sim/sim_1/behav/xsim'
-xelab -wto 0cd527afc77f4187a023976c892304b6 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot datapath_tb_behav xil_defaultlib.datapath_tb -log elaborate.log
-Vivado Simulator 2020.1
-Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
-Running: /tools/Xilinx/Vivado/2020.1/bin/unwrapped/lnx64.o/xelab -wto 0cd527afc77f4187a023976c892304b6 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot datapath_tb_behav xil_defaultlib.datapath_tb -log elaborate.log 
-Using 8 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling package std.standard
-Compiling package std.textio
-Compiling package ieee.std_logic_1164
-Compiling package ieee.std_logic_arith
-Compiling package ieee.std_logic_unsigned
-Compiling architecture behavioral of entity xil_defaultlib.datapath [datapath_default]
-Compiling architecture behavior of entity xil_defaultlib.datapath_tb
-Built simulation snapshot datapath_tb_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/miguel/Desktop/PSD/PSD_lab1/Lab1.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "datapath_tb_behav -key {Behavioral:sim_1:Functional:datapath_tb} -tclbatch {datapath_tb.tcl} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
-Vivado Simulator 2020.1
-Time resolution is 1 ps
-source datapath_tb.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-# run 1000ns
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'datapath_tb_behav' loaded.
-INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-launch_simulation: Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 7719.055 ; gain = 0.000 ; free physical = 120 ; free virtual = 4306
+launch_simulation: Time (s): cpu = 00:00:17 ; elapsed = 00:00:11 . Memory (MB): peak = 7340.965 ; gain = 58.664 ; free physical = 981 ; free virtual = 4889

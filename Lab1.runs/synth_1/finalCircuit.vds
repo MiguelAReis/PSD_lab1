@@ -2,8 +2,8 @@
 # Vivado v2020.1 (64-bit)
 # SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
 # IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
-# Start of session at: Fri Oct  9 15:44:18 2020
-# Process ID: 13207
+# Start of session at: Sat Oct 10 19:53:22 2020
+# Process ID: 22652
 # Current directory: /home/miguel/Desktop/PSD/PSD_lab1/Lab1.runs/synth_1
 # Command line: vivado -log finalCircuit.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source finalCircuit.tcl
 # Log file: /home/miguel/Desktop/PSD/PSD_lab1/Lab1.runs/synth_1/finalCircuit.vds
@@ -14,11 +14,12 @@ Command: synth_design -top finalCircuit -part xc7a35tcpg236-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 13275
+INFO: [Synth 8-7075] Helper process launched with PID 22679
 ---------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:00:09 ; elapsed = 00:00:15 . Memory (MB): peak = 2080.707 ; gain = 0.000 ; free physical = 858 ; free virtual = 4677
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 2087.648 ; gain = 0.000 ; free physical = 718 ; free virtual = 3068
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'finalCircuit' [/home/miguel/Desktop/PSD/PSD_lab1/Lab1.srcs/sources_1/new/finalCircuit.vhd:44]
 INFO: [Synth 8-3491] module 'hex2disp' declared at '/home/miguel/Desktop/PSD/PSD_lab1/Lab1.srcs/sources_1/imports/lab0Files/hex2disp.vhd:14' bound to instance 'inst_hex3' of component 'hex2disp' [/home/miguel/Desktop/PSD/PSD_lab1/Lab1.srcs/sources_1/new/finalCircuit.vhd:100]
@@ -43,18 +44,46 @@ INFO: [Synth 8-638] synthesizing module 'datapath' [/home/miguel/Desktop/PSD/PSD
 INFO: [Synth 8-256] done synthesizing module 'datapath' (5#1) [/home/miguel/Desktop/PSD/PSD_lab1/Lab1.srcs/sources_1/new/datapath.vhd:48]
 INFO: [Synth 8-256] done synthesizing module 'finalCircuit' (6#1) [/home/miguel/Desktop/PSD/PSD_lab1/Lab1.srcs/sources_1/new/finalCircuit.vhd:44]
 ---------------------------------------------------------------------------------
-Finished Synthesize : Time (s): cpu = 00:00:11 ; elapsed = 00:00:18 . Memory (MB): peak = 2080.707 ; gain = 0.000 ; free physical = 896 ; free virtual = 4701
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 2087.648 ; gain = 0.000 ; free physical = 817 ; free virtual = 3167
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:20 . Memory (MB): peak = 2080.707 ; gain = 0.000 ; free physical = 850 ; free virtual = 4661
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 2087.648 ; gain = 0.000 ; free physical = 810 ; free virtual = 3163
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 2087.648 ; gain = 0.000 ; free physical = 810 ; free virtual = 3163
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2087.648 ; gain = 0.000 ; free physical = 797 ; free virtual = 3160
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/miguel/Desktop/PSD/PSD_lab1/Lab1.srcs/constrs_1/new/test.xdc]
+Finished Parsing XDC File [/home/miguel/Desktop/PSD/PSD_lab1/Lab1.srcs/constrs_1/new/test.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2135.383 ; gain = 0.000 ; free physical = 728 ; free virtual = 3090
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2135.383 ; gain = 0.000 ; free physical = 728 ; free virtual = 3090
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 2135.383 ; gain = 47.734 ; free physical = 785 ; free virtual = 3149
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
-INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:20 . Memory (MB): peak = 2088.586 ; gain = 7.879 ; free physical = 839 ; free virtual = 4650
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 2135.383 ; gain = 47.734 ; free physical = 785 ; free virtual = 3149
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:15 . Memory (MB): peak = 2135.383 ; gain = 47.734 ; free physical = 788 ; free virtual = 3152
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'controlUnit'
 ---------------------------------------------------------------------------------------------------
@@ -73,9 +102,8 @@ INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'contr
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'controlUnit'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:20 . Memory (MB): peak = 2088.586 ; gain = 7.879 ; free physical = 777 ; free virtual = 4606
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 2135.383 ; gain = 47.734 ; free physical = 779 ; free virtual = 3143
 ---------------------------------------------------------------------------------
-No constraint files found.
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -109,25 +137,29 @@ BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-No constraint files found.
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:37 . Memory (MB): peak = 2088.586 ; gain = 7.879 ; free physical = 566 ; free virtual = 4414
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 2135.383 ; gain = 47.734 ; free physical = 766 ; free virtual = 3134
 ---------------------------------------------------------------------------------
-No constraint files found.
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:23 . Memory (MB): peak = 2135.383 ; gain = 47.734 ; free physical = 645 ; free virtual = 3012
+---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:37 . Memory (MB): peak = 2088.586 ; gain = 7.879 ; free physical = 562 ; free virtual = 4414
+Finished Timing Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:23 . Memory (MB): peak = 2135.383 ; gain = 47.734 ; free physical = 645 ; free virtual = 3012
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:24 ; elapsed = 00:00:38 . Memory (MB): peak = 2088.586 ; gain = 7.879 ; free physical = 561 ; free virtual = 4410
+Finished Technology Mapping : Time (s): cpu = 00:00:19 ; elapsed = 00:00:23 . Memory (MB): peak = 2135.383 ; gain = 47.734 ; free physical = 643 ; free virtual = 3010
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -145,72 +177,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:33 ; elapsed = 00:00:47 . Memory (MB): peak = 2088.586 ; gain = 7.879 ; free physical = 836 ; free virtual = 4645
+Finished IO Insertion : Time (s): cpu = 00:00:22 ; elapsed = 00:00:26 . Memory (MB): peak = 2135.383 ; gain = 47.734 ; free physical = 642 ; free virtual = 3009
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:33 ; elapsed = 00:00:47 . Memory (MB): peak = 2088.586 ; gain = 7.879 ; free physical = 836 ; free virtual = 4645
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:22 ; elapsed = 00:00:26 . Memory (MB): peak = 2135.383 ; gain = 47.734 ; free physical = 642 ; free virtual = 3009
 ---------------------------------------------------------------------------------
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin dd0[6] with 1st driver pin 'segments_OBUF[6]_inst_i_2/O' [/home/miguel/Desktop/PSD/PSD_lab1/Lab1.srcs/sources_1/new/controlUnit.vhd:61]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin dd0[6] with 2nd driver pin 'segments_OBUF[6]_inst_i_3/O' [/home/miguel/Desktop/PSD/PSD_lab1/Lab1.srcs/sources_1/new/controlUnit.vhd:61]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin dd0[6] with 3rd driver pin 'segments_OBUF[6]_inst_i_4/O' [/home/miguel/Desktop/PSD/PSD_lab1/Lab1.srcs/sources_1/new/controlUnit.vhd:61]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin dd0[6] with 4th driver pin 'segments_OBUF[6]_inst_i_5/O' [/home/miguel/Desktop/PSD/PSD_lab1/Lab1.srcs/sources_1/new/controlUnit.vhd:61]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin dd0[5] with 1st driver pin 'segments_OBUF[5]_inst_i_2/O' [/home/miguel/Desktop/PSD/PSD_lab1/Lab1.srcs/sources_1/new/controlUnit.vhd:61]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin dd0[5] with 2nd driver pin 'segments_OBUF[5]_inst_i_3/O' [/home/miguel/Desktop/PSD/PSD_lab1/Lab1.srcs/sources_1/new/controlUnit.vhd:61]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin dd0[5] with 3rd driver pin 'segments_OBUF[5]_inst_i_4/O' [/home/miguel/Desktop/PSD/PSD_lab1/Lab1.srcs/sources_1/new/controlUnit.vhd:61]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin dd0[5] with 4th driver pin 'segments_OBUF[5]_inst_i_5/O' [/home/miguel/Desktop/PSD/PSD_lab1/Lab1.srcs/sources_1/new/controlUnit.vhd:61]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin dd0[4] with 1st driver pin 'segments_OBUF[4]_inst_i_2/O' [/home/miguel/Desktop/PSD/PSD_lab1/Lab1.srcs/sources_1/new/controlUnit.vhd:61]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin dd0[4] with 2nd driver pin 'segments_OBUF[4]_inst_i_3/O' [/home/miguel/Desktop/PSD/PSD_lab1/Lab1.srcs/sources_1/new/controlUnit.vhd:61]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin dd0[4] with 3rd driver pin 'segments_OBUF[4]_inst_i_4/O' [/home/miguel/Desktop/PSD/PSD_lab1/Lab1.srcs/sources_1/new/controlUnit.vhd:61]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin dd0[4] with 4th driver pin 'segments_OBUF[4]_inst_i_5/O' [/home/miguel/Desktop/PSD/PSD_lab1/Lab1.srcs/sources_1/new/controlUnit.vhd:61]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin dd0[3] with 1st driver pin 'segments_OBUF[3]_inst_i_2/O' [/home/miguel/Desktop/PSD/PSD_lab1/Lab1.srcs/sources_1/new/controlUnit.vhd:61]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin dd0[3] with 2nd driver pin 'segments_OBUF[3]_inst_i_3/O' [/home/miguel/Desktop/PSD/PSD_lab1/Lab1.srcs/sources_1/new/controlUnit.vhd:61]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin dd0[3] with 3rd driver pin 'segments_OBUF[3]_inst_i_4/O' [/home/miguel/Desktop/PSD/PSD_lab1/Lab1.srcs/sources_1/new/controlUnit.vhd:61]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin dd0[3] with 4th driver pin 'segments_OBUF[3]_inst_i_5/O' [/home/miguel/Desktop/PSD/PSD_lab1/Lab1.srcs/sources_1/new/controlUnit.vhd:61]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin dd0[2] with 1st driver pin 'segments_OBUF[2]_inst_i_2/O' [/home/miguel/Desktop/PSD/PSD_lab1/Lab1.srcs/sources_1/new/controlUnit.vhd:61]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin dd0[2] with 2nd driver pin 'segments_OBUF[2]_inst_i_3/O' [/home/miguel/Desktop/PSD/PSD_lab1/Lab1.srcs/sources_1/new/controlUnit.vhd:61]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin dd0[2] with 3rd driver pin 'segments_OBUF[2]_inst_i_4/O' [/home/miguel/Desktop/PSD/PSD_lab1/Lab1.srcs/sources_1/new/controlUnit.vhd:61]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin dd0[2] with 4th driver pin 'segments_OBUF[2]_inst_i_5/O' [/home/miguel/Desktop/PSD/PSD_lab1/Lab1.srcs/sources_1/new/controlUnit.vhd:61]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin dd0[1] with 1st driver pin 'segments_OBUF[1]_inst_i_2/O' [/home/miguel/Desktop/PSD/PSD_lab1/Lab1.srcs/sources_1/new/controlUnit.vhd:61]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin dd0[1] with 2nd driver pin 'segments_OBUF[1]_inst_i_3/O' [/home/miguel/Desktop/PSD/PSD_lab1/Lab1.srcs/sources_1/new/controlUnit.vhd:61]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin dd0[1] with 3rd driver pin 'segments_OBUF[1]_inst_i_4/O' [/home/miguel/Desktop/PSD/PSD_lab1/Lab1.srcs/sources_1/new/controlUnit.vhd:61]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin dd0[1] with 4th driver pin 'segments_OBUF[1]_inst_i_5/O' [/home/miguel/Desktop/PSD/PSD_lab1/Lab1.srcs/sources_1/new/controlUnit.vhd:61]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin dd0[0] with 1st driver pin 'segments_OBUF[0]_inst_i_2/O' [/home/miguel/Desktop/PSD/PSD_lab1/Lab1.srcs/sources_1/new/controlUnit.vhd:61]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin dd0[0] with 2nd driver pin 'segments_OBUF[0]_inst_i_3/O' [/home/miguel/Desktop/PSD/PSD_lab1/Lab1.srcs/sources_1/new/controlUnit.vhd:61]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin dd0[0] with 3rd driver pin 'segments_OBUF[0]_inst_i_4/O' [/home/miguel/Desktop/PSD/PSD_lab1/Lab1.srcs/sources_1/new/controlUnit.vhd:61]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin dd0[0] with 4th driver pin 'segments_OBUF[0]_inst_i_5/O' [/home/miguel/Desktop/PSD/PSD_lab1/Lab1.srcs/sources_1/new/controlUnit.vhd:61]
-
-Report Check Netlist: 
-+------+------------------+-------+---------+-------+------------------+
-|      |Item              |Errors |Warnings |Status |Description       |
-+------+------------------+-------+---------+-------+------------------+
-|1     |multi_driven_nets |      0|        7|Failed |Multi driven nets |
-+------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:33 ; elapsed = 00:00:47 . Memory (MB): peak = 2088.586 ; gain = 7.879 ; free physical = 839 ; free virtual = 4648
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:22 ; elapsed = 00:00:26 . Memory (MB): peak = 2135.383 ; gain = 47.734 ; free physical = 642 ; free virtual = 3009
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:33 ; elapsed = 00:00:47 . Memory (MB): peak = 2088.586 ; gain = 7.879 ; free physical = 839 ; free virtual = 4648
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:22 ; elapsed = 00:00:26 . Memory (MB): peak = 2135.383 ; gain = 47.734 ; free physical = 642 ; free virtual = 3009
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:33 ; elapsed = 00:00:47 . Memory (MB): peak = 2088.586 ; gain = 7.879 ; free physical = 839 ; free virtual = 4648
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:22 ; elapsed = 00:00:26 . Memory (MB): peak = 2135.383 ; gain = 47.734 ; free physical = 642 ; free virtual = 3009
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:33 ; elapsed = 00:00:47 . Memory (MB): peak = 2088.586 ; gain = 7.879 ; free physical = 839 ; free virtual = 4648
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:22 ; elapsed = 00:00:26 . Memory (MB): peak = 2135.383 ; gain = 47.734 ; free physical = 642 ; free virtual = 3009
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -230,48 +227,37 @@ Report Cell Usage:
 |2     |CARRY4 |    14|
 |3     |LUT1   |     2|
 |4     |LUT2   |    26|
-|5     |LUT3   |    11|
-|6     |LUT4   |    36|
+|5     |LUT3   |     4|
+|6     |LUT4   |    22|
 |7     |LUT5   |    11|
-|8     |LUT6   |    35|
-|9     |MUXF7  |     1|
+|8     |LUT6   |    49|
+|9     |MUXF7  |     8|
 |10    |FDCE   |     7|
 |11    |FDPE   |     1|
 |12    |FDRE   |    43|
 |13    |IBUF   |    15|
 |14    |OBUF   |    11|
 +------+-------+------+
-
-Report Instance Areas: 
-+------+-------------------+------------+------+
-|      |Instance           |Module      |Cells |
-+------+-------------------+------------+------+
-|1     |top                |            |   216|
-|2     |  inst_clkdiv      |clkdiv      |    38|
-|3     |  inst_controlUnit |controlUnit |    21|
-|4     |  inst_datapath    |datapath    |   115|
-|5     |  inst_disp7       |disp7       |    15|
-+------+-------------------+------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:33 ; elapsed = 00:00:47 . Memory (MB): peak = 2088.586 ; gain = 7.879 ; free physical = 839 ; free virtual = 4648
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:22 ; elapsed = 00:00:26 . Memory (MB): peak = 2135.383 ; gain = 47.734 ; free physical = 642 ; free virtual = 3009
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 28 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:33 ; elapsed = 00:00:47 . Memory (MB): peak = 2088.586 ; gain = 7.879 ; free physical = 840 ; free virtual = 4648
-Synthesis Optimization Complete : Time (s): cpu = 00:00:33 ; elapsed = 00:00:47 . Memory (MB): peak = 2088.594 ; gain = 7.879 ; free physical = 840 ; free virtual = 4648
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:21 ; elapsed = 00:00:25 . Memory (MB): peak = 2135.383 ; gain = 0.000 ; free physical = 694 ; free virtual = 3062
+Synthesis Optimization Complete : Time (s): cpu = 00:00:22 ; elapsed = 00:00:26 . Memory (MB): peak = 2135.391 ; gain = 47.734 ; free physical = 694 ; free virtual = 3062
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2088.594 ; gain = 0.000 ; free physical = 908 ; free virtual = 4716
-INFO: [Netlist 29-17] Analyzing 15 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2135.391 ; gain = 0.000 ; free physical = 688 ; free virtual = 3055
+INFO: [Netlist 29-17] Analyzing 22 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2112.598 ; gain = 0.000 ; free physical = 827 ; free virtual = 4637
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2135.391 ; gain = 0.000 ; free physical = 710 ; free virtual = 3078
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-36 Infos, 0 Warnings, 28 Critical Warnings and 0 Errors encountered.
+38 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:47 ; elapsed = 00:00:52 . Memory (MB): peak = 2112.598 ; gain = 32.016 ; free physical = 965 ; free virtual = 4776
+synth_design: Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 2135.391 ; gain = 47.867 ; free physical = 850 ; free virtual = 3218
 INFO: [Common 17-1381] The checkpoint '/home/miguel/Desktop/PSD/PSD_lab1/Lab1.runs/synth_1/finalCircuit.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file finalCircuit_utilization_synth.rpt -pb finalCircuit_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Fri Oct  9 15:45:43 2020...
+INFO: [Common 17-206] Exiting Vivado at Sat Oct 10 19:54:06 2020...

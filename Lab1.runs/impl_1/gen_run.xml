@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1602356064">
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <File Type="BITSTR-SYSDEF" Name="finalCircuit.sysdef"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="finalCircuit.ltx"/>
+  <File Type="BG-BGN" Name="finalCircuit.bgn"/>
+  <File Type="NPI_FILE" Name="finalCircuit.npi"/>
+  <File Type="BG-DRC" Name="finalCircuit.drc"/>
+  <File Type="RNPI_FILE" Name="finalCircuit.rnpi"/>
+  <File Type="CFI_FILE" Name="finalCircuit.cfi"/>
+  <File Type="RCFI_FILE" Name="finalCircuit.rcfi"/>
+  <File Type="PDI-FILE" Name="finalCircuit.pdi"/>
+  <File Type="BITSTR-MMI" Name="finalCircuit.mmi"/>
+  <File Type="BITSTR-BMM" Name="finalCircuit_bd.bmm"/>
+  <File Type="BITSTR-NKY" Name="finalCircuit.nky"/>
+  <File Type="BITSTR-RBT" Name="finalCircuit.rbt"/>
+  <File Type="BITSTR-MSK" Name="finalCircuit.msk"/>
+  <File Type="RBD_FILE" Name="finalCircuit.rbd"/>
+  <File Type="BG-BIN" Name="finalCircuit.bin"/>
+  <File Type="BG-BIT" Name="finalCircuit.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="finalCircuit_bus_skew_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="finalCircuit_bus_skew_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="finalCircuit_bus_skew_postroute_physopted.rpt"/>
+  <File Type="RDI-RDI" Name="finalCircuit.vdi"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="finalCircuit_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="finalCircuit_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="finalCircuit_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="finalCircuit_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="finalCircuit_postroute_physopt.dcp"/>
+  <File Type="ROUTE-BUS-SKEW" Name="finalCircuit_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="finalCircuit_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-SIMILARITY" Name="finalCircuit_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-TIMING-RPX" Name="finalCircuit_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-TIMING-PB" Name="finalCircuit_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="finalCircuit_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="finalCircuit_route_status.pb"/>
+  <File Type="ROUTE-STATUS" Name="finalCircuit_route_status.rpt"/>
+  <File Type="ROUTE-PWR-RPX" Name="finalCircuit_power_routed.rpx"/>
+  <File Type="ROUTE-PWR-SUM" Name="finalCircuit_power_summary_routed.pb"/>
+  <File Type="ROUTE-PWR" Name="finalCircuit_power_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="finalCircuit_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="finalCircuit_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="finalCircuit_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-RPX" Name="finalCircuit_drc_routed.rpx"/>
+  <File Type="ROUTE-DRC-PB" Name="finalCircuit_drc_routed.pb"/>
+  <File Type="ROUTE-DRC" Name="finalCircuit_drc_routed.rpt"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="finalCircuit_routed_bb.dcp"/>
+  <File Type="ROUTE-DCP" Name="finalCircuit_routed.dcp"/>
+  <File Type="ROUTE-ERROR-DCP" Name="finalCircuit_routed_error.dcp"/>
+  <File Type="PHYSOPT-TIMING" Name="finalCircuit_timing_summary_physopted.rpt"/>
+  <File Type="PHYSOPT-DRC" Name="finalCircuit_drc_physopted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="finalCircuit_physopt.dcp"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="finalCircuit_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="finalCircuit_postplace_pwropt.dcp"/>
+  <File Type="PLACE-TIMING" Name="finalCircuit_timing_summary_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="finalCircuit_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="finalCircuit_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-CTRL" Name="finalCircuit_control_sets_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="finalCircuit_utilization_placed.pb"/>
+  <File Type="PLACE-UTIL" Name="finalCircuit_utilization_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="finalCircuit_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-IO" Name="finalCircuit_io_placed.rpt"/>
+  <File Type="PLACE-DCP" Name="finalCircuit_placed.dcp"/>
+  <File Type="PWROPT-TIMING" Name="finalCircuit_timing_summary_pwropted.rpt"/>
+  <File Type="PWROPT-DRC" Name="finalCircuit_drc_pwropted.rpt"/>
+  <File Type="PWROPT-DCP" Name="finalCircuit_pwropt.dcp"/>
+  <File Type="OPT-TIMING" Name="finalCircuit_timing_summary_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="finalCircuit.hwdef"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="finalCircuit_methodology_drc_opted.rpt"/>
+  <File Type="OPT-DRC" Name="finalCircuit_drc_opted.rpt"/>
+  <File Type="OPT-DCP" Name="finalCircuit_opt.dcp"/>
+  <File Type="INIT-TIMING" Name="finalCircuit_timing_summary_init.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="finalCircuit_bus_skew_routed.rpx"/>
+  <File Type="REPORTS-TCL" Name="finalCircuit_reports.tcl"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="finalCircuit_bus_skew_routed.pb"/>
+  <File Type="PA-TCL" Name="finalCircuit.tcl"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/new/controlUnit.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/datapath.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/lab0Files/hex2disp.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../lab0Files/hex2disp.vhd"/>
+        <Attr Name="ImportTime" Val="1506362870"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/lab0Files/disp7.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../lab0Files/disp7.vhd"/>
+        <Attr Name="ImportTime" Val="1506363080"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/lab0Files/clkdiv.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../lab0Files/clkdiv.vhd"/>
+        <Attr Name="ImportTime" Val="1506361942"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/finalCircuit.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="finalCircuit"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/new/test.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+</GenRun>

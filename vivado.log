@@ -194,3 +194,7 @@ xsim: Time (s): cpu = 00:00:10 ; elapsed = 00:00:05 . Memory (MB): peak = 7340.9
 INFO: [USF-XSim-96] XSim completed. Design snapshot 'datapath_tb_behav' loaded.
 INFO: [USF-XSim-97] XSim simulation ran for 1000ns
 launch_simulation: Time (s): cpu = 00:00:17 ; elapsed = 00:00:11 . Memory (MB): peak = 7340.965 ; gain = 58.664 ; free physical = 981 ; free virtual = 4889
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Sat Oct 10 10:36:57 2020...

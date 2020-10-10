@@ -99,13 +99,13 @@ begin
 
     inst_hex3: hex2disp port map( -- From datapath to Hex2 disp
         sw => reg2(7 downto 4),
-        seg =>dd0);
+        seg =>dd3);
     inst_hex2: hex2disp port map(
         sw => reg2(3 downto 0),
-        seg =>dd0);
+        seg =>dd2);
     inst_hex1: hex2disp port map(
         sw => reg1(7 downto 4),
-        seg =>dd0);
+        seg =>dd1);
     inst_hex0: hex2disp port map(
         sw => reg1(3 downto 0),
         seg =>dd0);

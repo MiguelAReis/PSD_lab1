@@ -19,3 +19,4 @@ wait_on_run synth_1
 synth_design -rtl -name rtl_1
 launch_simulation
 source datapath_tb.tcl
+close_sim

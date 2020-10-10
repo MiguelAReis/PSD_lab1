@@ -58,7 +58,7 @@ begin
                 WHEN s0 =>
                     state <= s1;
                 WHEN s1 =>
-                    IF enter ='1' THEN
+                    IF enter = '1' THEN
                         state <= s2;
                     ELSE
                         state <= s1;
